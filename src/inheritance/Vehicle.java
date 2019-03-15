@@ -2,7 +2,7 @@ package inheritance;
 
 import java.util.Date;
 
-public class Vehicle {
+public abstract class Vehicle {
     private String panelNumber;
     protected String color;
     private String modelNumber;
@@ -15,9 +15,7 @@ public class Vehicle {
         this.factoryDate = factoryDate;
     }
 
-    public String getColor() {
-        return color;
-    }
+    public abstract String getColor();
 
     public void setColor(String color) {
         this.color = color;

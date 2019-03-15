@@ -2,7 +2,7 @@ package inheritance;
 
 import java.util.Date;
 
-public class Car extends Vehicle {
+public class Car extends Vehicle implements Utils{
 
     private int doorsCount;
     private int wheelsCount;
@@ -42,6 +42,11 @@ public class Car extends Vehicle {
     }
 
     @Override
+    public String getColor() {
+        return "Car color is: " + this.color ;
+    }
+
+    @Override
     public void accelerate() {
         super.accelerate(); // will using super method first.
         System.out.println("Accelerate Car");
@@ -56,5 +61,15 @@ public class Car extends Vehicle {
     @Override
     public String toString() {
         return "This is a car version of the vehicle";
+    }
+
+    @Override
+    public void fillFuel() {
+        // imp
+        System.out.println("Car fuel is full");
+    }
+
+    public void method1() {
+        System.out.println("test");
     }
 }
