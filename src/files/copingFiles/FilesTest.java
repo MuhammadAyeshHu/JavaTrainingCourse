@@ -1,4 +1,6 @@
 package files.copingFiles;
+import files.FilesUtil;
+
 import java.io.*;
 public class FilesTest {
     public static final String TEST_FILE = "Files\\inputFiles\\Test File";

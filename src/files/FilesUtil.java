@@ -1,4 +1,4 @@
-package files.copingFiles;
+package files;
 
 import java.io.*;
 import java.util.concurrent.TimeUnit;
