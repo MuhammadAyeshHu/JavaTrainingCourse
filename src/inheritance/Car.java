@@ -1,9 +1,10 @@
 package inheritance;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Car extends Vehicle implements Utils{
-
+public class Car extends Vehicle implements Utils, Serializable {
+    private static final long serialVersionUID = 1L;
     private int doorsCount;
     private int wheelsCount;
     private int gearCount;
@@ -60,7 +61,7 @@ public class Car extends Vehicle implements Utils{
 
     @Override
     public String toString() {
-        return "This is a car version of the vehicle";
+        return "Color:\t" + getColor() + ",\tModel Number:\t" + getModelNumber();
     }
 
     @Override
