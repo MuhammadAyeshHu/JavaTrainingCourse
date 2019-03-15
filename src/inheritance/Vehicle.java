@@ -1,8 +1,9 @@
 package inheritance;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Vehicle {
+public class Vehicle implements Serializable {
     private String panelNumber;
     protected String color;
     private String modelNumber;
