@@ -22,9 +22,9 @@ public class Server implements Runnable {
 
     @Override
     public void run() {
-        while (true) {
-            System.out.println(readingFromSocket.readLine());
-        }
+        Scanner scanner = new Scanner(System.in);
+        readFromServer();
+        writeToServer(scanner);
     }
 
     private void writeToServer(Scanner scanner) {
