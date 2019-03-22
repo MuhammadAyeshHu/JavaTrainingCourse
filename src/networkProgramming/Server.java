@@ -23,17 +23,17 @@ public class Server implements Runnable {
     @Override
     public void run() {
         Scanner scanner = new Scanner(System.in);
-        readFromServer();
-        writeToServer(scanner);
+        readFromClient();
+        writeToClient(scanner);
     }
 
-    private void writeToServer(Scanner scanner) {
+    private void writeToClient(Scanner scanner) {
         while (scanner.hasNext()) {
             writeToSocket.write(scanner.nextLine());
         }
     }
 
-    private void readFromServer() {
+    private void readFromClient() {
         Thread thread = new Thread(() -> {
             while (true) {
                 System.out.println(readingFromSocket.readLine());

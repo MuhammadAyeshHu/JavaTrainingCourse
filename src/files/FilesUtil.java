@@ -118,5 +118,6 @@ public class FilesUtil implements Closeable {
     @Override
     public void close() throws IOException {
         printWriter.close();
+        fileReader.close();
     }
 }

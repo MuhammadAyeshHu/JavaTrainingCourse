@@ -32,7 +32,7 @@ public class WriteObjectToFile {
      * takes any object as an input
      * @param object
      */
-    public static void addRecordsToTheFile(Object object) {
+    public static void addRecord(Object object) {
         try {
             writeObject.writeObject(object);
         } catch (NotSerializableException e) {
