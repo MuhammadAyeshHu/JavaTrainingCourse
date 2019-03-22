@@ -12,7 +12,7 @@ public class ObjectSerializationTest {
 //        Writing Object To File.
         WriteObjectToFile.openFile(TEST_FILE);
         Car car = new Car("123", "Red", "123464",new Date(),4,4,6);
-        WriteObjectToFile.addRecordsToTheFile(car);
+        WriteObjectToFile.addRecord(car);
         WriteObjectToFile.closingFile();
 
 //        Reading From File.
