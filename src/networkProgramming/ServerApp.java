@@ -19,10 +19,10 @@ public class ServerApp {
                 try {
                     ServerSocket server = new ServerSocket(5000);
                     Socket clientSocket = server.accept();
-
+                    System.out.println("Client Connected!");
                     //creating clients connection listener
-                    Server serverObject = new Server(clientSocket);
-                    threadPool.execute(serverObject);
+                    ServerWorker serverWorker = new ServerWorker(clientSocket);
+                    threadPool.execute(serverWorker);
                 } catch (BindException e) {
                 }
             }
